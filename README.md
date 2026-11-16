@@ -12,9 +12,13 @@ python -m http.server 8000 --bind 127.0.0.1
 
 站点为纯静态页面，资源使用相对路径。GitHub Pages 发布源选择 **Deploy from a branch → main → /(root)**，根目录的 `.nojekyll` 让 GitHub Pages 直接发布静态文件。[GitHub Pages 官方部署说明](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)
 
+页面样式、交互和图标均由站点自身提供。图标使用 Font Awesome 4.7.0 的本地五字形子集。[图标许可](./assets/fonts/lujian-icons-ofl.txt)
+
 ## 图片素材
 
 图片均来自履见工作区的展陈素材、样机实拍、软件演示或评估图。网站副本位于 [assets/images](./assets/images)，源文件名用于团队回查。
+
+文件名末尾的数字表示页面用图的像素宽度。首图会按屏幕选择尺寸，图集、模型图和证书可点击查看高清版本。
 
 | 网站文件 | 项目来源 | 处理与用途 |
 | --- | --- | --- |

@@ -10,9 +10,6 @@
   <meta property="og:description" content="为足踝术后康复研究提供可重复、可比较、可回看的双脚足底记录。">
   <title>履见 LUJIAN · 智能鞋垫科研原型</title>
   <link rel="icon" type="image/png" href="./assets/images/lujian-mark.png">
-  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
-  <script src="https://cdn.tailwindcss.com" defer></script>
   <link rel="stylesheet" href="./assets/site.css">
   <script src="./assets/site.js" defer></script>
 </head>
@@ -57,7 +54,14 @@
             <div class="instrument-frame">
               <div class="instrument-top"><span class="instrument-id mono"><b aria-hidden="true">+</b> LUJIAN / V3</span><span>双脚足底采集系统</span></div>
               <div class="hero-image">
-                <img class="block w-full" src="./assets/images/hero-concept.webp" width="1536" height="1024" alt="履见产品概念渲染，两只深蓝柔性鞋垫与一对踝侧采集盒，右侧鞋垫示意足底响应" fetchpriority="high">
+                <picture>
+                  <source media="(max-width: 520px)" srcset="./assets/images/hero-concept-768.webp 768w, ./assets/images/hero-concept-1024.webp 1024w"
+                    sizes="(max-width: 450px) calc(100vw - 56px), calc(89.3vw - 24px)">
+                  <img src="./assets/images/hero-concept-1024.webp"
+                    srcset="./assets/images/hero-concept-768.webp 768w, ./assets/images/hero-concept-1024.webp 1024w, ./assets/images/hero-concept.webp 1536w"
+                    sizes="(max-width: 720px) calc(89.3vw - 24px), (max-width: 860px) 616px, (max-width: 960px) calc(45.5vw - 24px), (max-width: 1344px) calc(49vw - 24px), 632px"
+                    width="1536" height="1024" alt="履见产品概念渲染，两只深蓝柔性鞋垫与一对踝侧采集盒，右侧鞋垫示意足底响应" fetchpriority="high">
+                </picture>
               </div>
               <figcaption class="instrument-bottom"><span>产品概念图</span><span class="scale-key"><b aria-hidden="true"></b>足底响应示意</span></figcaption>
             </div>
@@ -108,7 +112,7 @@
             </div>
             <figure class="hardware-media">
               <a class="zoomable hardware-photo" href="./assets/images/v3-prototype.webp" data-preview="V3 双脚穿戴工程样机实拍">
-                <img src="./assets/images/v3-prototype.webp" width="1180" height="1021" alt="V3 工程样机的两只柔性鞋垫、踝侧采集盒与绑带" loading="lazy" decoding="async">
+                <img src="./assets/images/v3-prototype-840.webp" width="840" height="727" alt="V3 工程样机的两只柔性鞋垫、踝侧采集盒与绑带" loading="lazy" decoding="async">
               </a>
               <figcaption>V3 双脚穿戴工程样机实拍</figcaption>
             </figure>
@@ -146,7 +150,7 @@
             </div>
             <figure class="mobile-visual">
               <a class="zoomable" href="./assets/images/miniapp-heatmap.webp" data-preview="微信小程序热图界面演示">
-                <img src="./assets/images/miniapp-heatmap.webp" width="816" height="1840" alt="微信小程序演示界面的足底热图" loading="lazy" decoding="async">
+                <img src="./assets/images/miniapp-heatmap-360.webp" width="360" height="812" alt="微信小程序演示界面的足底热图" loading="lazy" decoding="async">
               </a>
               <figcaption>小程序界面演示</figcaption>
             </figure>
@@ -164,19 +168,19 @@
         <div class="photo-grid">
           <figure class="photo-card photo-feature">
             <a class="zoomable media-link" href="./assets/images/gallery-v3-wear.webp" data-preview="双脚工程样机穿戴实拍">
-              <img src="./assets/images/gallery-v3-wear.webp" width="1260" height="985" alt="双脚穿鞋时，在左右脚踝外侧通过绑带固定采集盒" loading="lazy" decoding="async">
+              <img src="./assets/images/gallery-v3-wear-900.webp" width="900" height="704" alt="双脚穿鞋时，在左右脚踝外侧通过绑带固定采集盒" loading="lazy" decoding="async">
             </a>
             <figcaption><strong>双脚样机穿戴</strong><span>工程实拍</span></figcaption>
           </figure>
           <figure class="photo-card">
             <a class="zoomable media-link" href="./assets/images/gallery-v3-case.webp" data-preview="V3 踝侧采集盒实拍">
-              <img src="./assets/images/gallery-v3-case.webp" width="1260" height="833" alt="安装了绑带和柔性排线的 V3 踝侧采集盒" loading="lazy" decoding="async">
+              <img src="./assets/images/gallery-v3-case-620.webp" width="620" height="410" alt="安装了绑带和柔性排线的 V3 踝侧采集盒" loading="lazy" decoding="async">
             </a>
             <figcaption><strong>V3 踝侧采集盒</strong><span>实拍</span></figcaption>
           </figure>
           <figure class="photo-card">
             <a class="zoomable media-link" href="./assets/images/gallery-v3-strap.webp" data-preview="V3 壳体侧面与绑带实拍">
-              <img src="./assets/images/gallery-v3-strap.webp" width="1260" height="862" alt="V3 采集盒侧面及固定绑带的细节" loading="lazy" decoding="async">
+              <img src="./assets/images/gallery-v3-strap-620.webp" width="620" height="424" alt="V3 采集盒侧面及固定绑带的细节" loading="lazy" decoding="async">
             </a>
             <figcaption><strong>壳体与绑带</strong><span>实拍</span></figcaption>
           </figure>
@@ -188,7 +192,7 @@
           </figure>
           <figure class="photo-card photo-concept">
             <a class="zoomable media-link" href="./assets/images/gallery-wear-concept.webp" data-preview="踝侧采集盒穿戴概念图">
-              <img src="./assets/images/gallery-wear-concept.webp" width="1008" height="1260" alt="白色运动鞋与绑在踝侧的采集盒穿戴示意" loading="lazy" decoding="async">
+              <img src="./assets/images/gallery-wear-concept-620.webp" width="620" height="775" alt="白色运动鞋与绑在踝侧的采集盒穿戴示意" loading="lazy" decoding="async">
             </a>
             <figcaption><strong>踝侧穿戴示意</strong><span>概念图</span></figcaption>
           </figure>
@@ -218,7 +222,7 @@
           </div>
           <figure class="validation-figure">
             <a class="zoomable" href="./assets/images/model-evaluation.webp" data-preview="站立与步行离线分类评估图" data-wide-preview>
-              <img src="./assets/images/model-evaluation.webp" width="2340" height="990" alt="左图为窗口级混淆矩阵，站立 245 窗与步行 390 窗均判对。右图为逐段留出预测，69 段均判对。" loading="lazy" decoding="async">
+              <img src="./assets/images/model-evaluation-1440.webp" width="1440" height="609" alt="左图为窗口级混淆矩阵，站立 245 窗与步行 390 窗均判对。右图为逐段留出预测，69 段均判对。" loading="lazy" decoding="async">
             </a>
             <figcaption><span>窗口混淆矩阵与逐段留出预测</span><button class="figure-open" type="button" data-open-figure hidden>放大图表<span aria-hidden="true"> ↗</span></button></figcaption>
           </figure>
@@ -271,15 +275,15 @@
         </div>
         <ul class="honors">
           <li>
-            <a class="zoomable media-link" href="./assets/images/evidence-bme.webp" data-preview="全国生医工竞赛获奖证书节选" data-wide-preview><img src="./assets/images/evidence-bme.webp" width="1500" height="632" alt="全国大学生生物医学工程创新设计竞赛获奖证书节选" loading="lazy" decoding="async"></a>
+            <a class="zoomable media-link" href="./assets/images/evidence-bme.webp" data-preview="全国生医工竞赛获奖证书节选" data-wide-preview><img src="./assets/images/evidence-bme-780.webp" width="780" height="329" alt="全国大学生生物医学工程创新设计竞赛获奖证书节选" loading="lazy" decoding="async"></a>
             <div><h3>全国三等奖</h3><p>第十一届全国大学生生物医学工程创新设计竞赛</p></div>
           </li>
           <li>
-            <a class="zoomable media-link" href="./assets/images/evidence-ican.webp" data-preview="iCAN 大湾区赛区获奖证书节选" data-wide-preview><img src="./assets/images/evidence-ican.webp" width="1500" height="630" alt="iCAN 大学生创新创业大赛大湾区赛区获奖证书节选" loading="lazy" decoding="async"></a>
+            <a class="zoomable media-link" href="./assets/images/evidence-ican.webp" data-preview="iCAN 大湾区赛区获奖证书节选" data-wide-preview><img src="./assets/images/evidence-ican-780.webp" width="780" height="328" alt="iCAN 大学生创新创业大赛大湾区赛区获奖证书节选" loading="lazy" decoding="async"></a>
             <div><h3>大湾区赛区三等奖</h3><p>iCAN 大学生创新创业大赛</p></div>
           </li>
           <li>
-            <a class="zoomable media-link" href="./assets/images/evidence-spring.webp" data-preview="「春雨杯」类别赛入围邀请函节选"><img src="./assets/images/evidence-spring.webp" width="1460" height="1177" alt="「春雨杯」中医及慢病类别赛入围邀请函节选" loading="lazy" decoding="async"></a>
+            <a class="zoomable media-link" href="./assets/images/evidence-spring.webp" data-preview="「春雨杯」类别赛入围邀请函节选"><img src="./assets/images/evidence-spring-768.webp" width="768" height="619" alt="「春雨杯」中医及慢病类别赛入围邀请函节选" loading="lazy" decoding="async"></a>
             <div><h3>类别赛入围</h3><p>首届「春雨杯」医工融合大赛暨第九届中国医疗器械创新创业大赛，中医及慢病类别赛</p></div>
           </li>
         </ul>
@@ -292,8 +296,8 @@
             </article>
             <article class="activity-card">
               <div class="activity-pair">
-                <a class="zoomable media-link" href="./assets/images/gallery-maker-event.webp" data-preview="创客节展位易拉宝实拍"><img src="./assets/images/gallery-maker-event.webp" width="830" height="1180" alt="履见易拉宝立在创客节展位前的现场照片" loading="lazy" decoding="async"></a>
-                <a class="zoomable media-link" href="./assets/images/evidence-exhibit.webp" data-preview="创客节展陈海报"><img src="./assets/images/evidence-exhibit.webp" width="1141" height="850" alt="履见智能鞋垫创客节展陈海报节选" loading="lazy" decoding="async"></a>
+                <a class="zoomable media-link" href="./assets/images/gallery-maker-event.webp" data-preview="创客节展位易拉宝实拍"><img src="./assets/images/gallery-maker-event-600.webp" width="600" height="853" alt="履见易拉宝立在创客节展位前的现场照片" loading="lazy" decoding="async"></a>
+                <a class="zoomable media-link" href="./assets/images/evidence-exhibit.webp" data-preview="创客节展陈海报"><img src="./assets/images/evidence-exhibit-720.webp" width="720" height="536" alt="履见智能鞋垫创客节展陈海报节选" loading="lazy" decoding="async"></a>
               </div>
               <div><h4>创客节项目展示</h4><p>团队为智能鞋垫展示准备了海报和易拉宝。</p></div>
             </article>

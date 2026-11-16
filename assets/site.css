@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "Lujian Site Icons";
+  src: url("./fonts/lujian-icons.woff") format("woff");
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+}
+
 :root {
   color-scheme: light;
   --ink: #0f172a;
@@ -20,7 +28,7 @@ html { scroll-behavior: smooth; scroll-padding-top: calc(var(--nav-height) + 24p
 body { margin: 0; background: var(--paper); color: var(--ink); font: 16px/1.65 var(--body-font); }
 h1, h2, h3, h4, p, figure, dl, dd { margin: 0; }
 body :is(h1, h2, h3, h4, strong, b) { font-weight: 700; }
-img { display: block; max-width: 100%; }
+img { display: block; max-width: 100%; height: auto; }
 a { color: inherit; text-decoration: none; }
 button { font: inherit; }
 [hidden] { display: none !important; }
@@ -29,6 +37,12 @@ button { font: inherit; }
 
 .shell { width: min(1200px, calc(100% - 2 * var(--side))); margin-inline: auto; }
 .mono { font-family: var(--mono-font); font-variant-numeric: tabular-nums; }
+.fa { display: inline-block; font: normal 1em/1 "Lujian Site Icons"; }
+.fa-clock-o::before { content: "\f017"; }
+.fa-history::before { content: "\f1da"; }
+.fa-info-circle::before { content: "\f05a"; }
+.fa-bookmark-o::before { content: "\f097"; }
+.fa-building-o::before { content: "\f0f7"; }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 .skip-link { position: fixed; z-index: 20; top: 12px; left: 12px; transform: translateY(-160%); background: var(--white); padding: 8px 16px; }
 .skip-link:focus { transform: none; }
