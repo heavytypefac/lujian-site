@@ -5,7 +5,7 @@ document.documentElement.classList.add("js");
 const navToggle = document.querySelector(".nav-toggle");
 const nav = document.querySelector("#main-nav");
 const navLabel = navToggle.querySelector(".sr-only");
-const compact = window.matchMedia("(max-width: 760px)");
+const compact = window.matchMedia("(max-width: 860px)");
 
 function setNavOpen(open) {
   nav.classList.toggle("is-open", open);
@@ -42,9 +42,9 @@ let previewTrigger;
 
 function showImage(link, trigger) {
   previewTrigger = trigger;
-  const wideChart = link.hasAttribute("data-wide-chart");
-  preview.classList.toggle("is-wide", wideChart);
-  previewBody.tabIndex = wideChart && compact.matches ? 0 : -1;
+  const wideImage = link.hasAttribute("data-wide-preview");
+  preview.classList.toggle("is-wide", wideImage);
+  previewBody.tabIndex = wideImage && compact.matches ? 0 : -1;
   previewTitle.textContent = link.dataset.preview;
   previewImage.alt = link.querySelector("img").alt;
   previewImage.src = link.href;
