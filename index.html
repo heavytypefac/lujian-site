@@ -12,9 +12,12 @@
   <link rel="icon" type="image/png" href="./assets/images/lujian-mark.png">
   <script>document.documentElement.classList.add("js");</script>
   <link rel="stylesheet" href="./assets/site.css">
+  <link rel="stylesheet" href="./assets/engineering.css">
   <script src="./assets/site.js" defer></script>
+  <script src="./assets/engineering.js" defer></script>
 </head>
 <body id="top">
+  <div class="reading-progress" aria-hidden="true"></div>
   <a class="skip-link" href="#main">跳到主要内容</a>
   <header class="masthead">
     <div class="shell masthead-inner">
@@ -26,13 +29,7 @@
         <span class="nav-toggle-lines" aria-hidden="true"></span><span class="sr-only">打开导航</span>
       </button>
       <nav class="main-nav" id="main-nav" aria-label="主导航">
-        <a href="#vision">项目愿景</a>
-        <a href="#system">核心系统</a>
-        <a href="#gallery">研发图集</a>
-        <a href="#validation">算法验证</a>
-        <a href="#roadmap">研发历程</a>
-        <a href="#team">团队荣誉</a>
-        <a class="nav-contact-mobile" href="#contact">交流合作</a>
+        <a href="#evolution">迭代路径</a><a href="#engineering">工程细节</a><a href="#effort">团队投入</a><a href="#system">核心系统</a><a href="#validation">数据验证</a><a href="#team">阶段成果</a><a class="nav-contact-mobile" href="#contact">交流合作</a>
       </nav>
       <a class="header-contact" href="#contact">交流合作<span aria-hidden="true">↗</span></a>
     </div>
@@ -47,9 +44,10 @@
             <h1>让足底变化，<br><em>有迹可循。</em></h1>
             <p class="hero-lede">面向足踝术后康复研究的双脚足底数字化检测系统，为足踝骨科、康复医学科医护及科研人员提供可重复、可比较、可回看的测量记录。</p>
             <div class="hero-actions">
-              <a class="button button-primary" href="#system">了解核心系统<span aria-hidden="true">↘</span></a>
+              <a class="button button-primary" href="#evolution">探索研发历程<span aria-hidden="true">↘</span></a>
               <a class="button button-secondary" href="#validation">查看验证结果<span aria-hidden="true">→</span></a>
             </div>
+            <a class="hero-jump" href="#engineering">查看 PCB 与外壳设计<span aria-hidden="true">→</span></a>
           </div>
           <figure class="hero-figure">
             <div class="instrument-frame">
@@ -74,6 +72,83 @@
           <div><dt>双模通信</dt><dd><span class="mono">USB / BLE</span></dd></div>
           <div><dt>省级大学生创新创业训练计划</dt><dd><span class="mono grant-id">S202614655022</span></dd></div>
         </dl>
+      </div>
+    </section>
+
+
+    <section class="section evolution" id="evolution" aria-labelledby="evolution-title">
+      <div class="shell">
+        <div class="section-heading split-heading">
+          <div><p class="eyebrow" lang="en">The making of LUJIAN</p><h2 id="evolution-title">一双鞋垫，<br>一步步成为一套系统。</h2></div>
+          <p>从 48 点阵列扫描，到双脚采集、电路修订、穿戴适配与数据验证。沿着研发路径，查看每一步留下的实物与记录。</p>
+        </div>
+        <div class="evolution-card">
+          <div class="evolution-topline"><span>2026 年研发档案</span><span class="curve-note">工程能力递进 · 阶段示意</span></div>
+          <p class="curve-mobile-hint">左右滑动曲线 · 点选研发阶段 <span aria-hidden="true">↔</span></p>
+          <div class="curve-scroll">
+            <div class="curve-stage">
+              <canvas id="evolution-curve" aria-hidden="true"></canvas>
+              <div class="version-tabs" role="tablist" aria-label="研发阶段">
+                <button class="version-node" id="version-0" role="tab" aria-selected="false" aria-controls="version-panel" tabindex="-1" data-version="0" style="--x:8%;--y:76%"><span class="node-dot">1</span><span class="node-date">4—6 月</span><strong>48 点原型</strong><span class="node-capability">跑通采集</span></button>
+                <button class="version-node" id="version-1" role="tab" aria-selected="false" aria-controls="version-panel" tabindex="-1" data-version="1" style="--x:29%;--y:62%"><span class="node-dot">2</span><span class="node-date">8—9 月</span><strong>双脚 120 点</strong><span class="node-capability">双脚与 IMU</span></button>
+                <button class="version-node" id="version-2" role="tab" aria-selected="true" aria-controls="version-panel" tabindex="0" data-version="2" style="--x:50%;--y:47%"><span class="node-dot">3</span><span class="node-date">10 月底—11 月</span><strong>V3 四层板</strong><span class="node-capability">修订与复核</span></button>
+                <button class="version-node" id="version-3" role="tab" aria-selected="false" aria-controls="version-panel" tabindex="-1" data-version="3" style="--x:71%;--y:30%"><span class="node-dot">4</span><span class="node-date">11 月 8 日</span><strong>同板外壳</strong><span class="node-capability">穿戴与装配</span></button>
+                <button class="version-node" id="version-4" role="tab" aria-selected="false" aria-controls="version-panel" tabindex="-1" data-version="4" style="--x:92%;--y:12%"><span class="node-dot">5</span><span class="node-date">11 月 14 日</span><strong>数据与模型</strong><span class="node-capability">记录可复现</span></button>
+              </div>
+            </div>
+          </div>
+          <div class="version-panel" id="version-panel" role="tabpanel" aria-labelledby="version-2" tabindex="0">
+            <figure class="version-visual"><a class="zoomable" href="./assets/images/pcb-routing.webp" data-preview="V3 右脚四层采集板走线审查图"><img id="version-image" src="./assets/images/pcb-routing.webp" width="1100" height="667" alt="V3 右脚四层采集板走线审查图" loading="lazy" decoding="async"></a><figcaption id="version-caption">11.0 中期 PPT 第 4 页 · PCB 走线审查图</figcaption></figure>
+            <div class="version-copy"><div class="version-meta"><span id="version-period">2026.10—11</span><span id="version-count" class="mono">03 / 05</span></div><h3 id="version-heading">把信号链，逐段核对清楚。</h3><p id="version-intro">右脚 V3 迭代为自研四层采集板。加入缓冲／直通 A/B 路径，复核原理图、传感器接口与实际铜连接。</p>
+              <dl class="version-facts"><div><dt>本阶段交付</dt><dd id="version-delivery">V3 电路、铜连接与左右脚接口审查记录</dd></div><div><dt>继续验证</dt><dd id="version-next">逐点映射、轻载响应、装机 BLE 与独立供电</dd></div></dl>
+              <div class="version-controls"><button type="button" data-version-step="-1" aria-label="上一研发阶段">←</button><p>点击曲线节点，回看迭代</p><button type="button" data-version-step="1" aria-label="下一研发阶段">→</button></div>
+            </div>
+          </div>
+        </div>
+        <p class="source-note">依据项目交接记录及 11.0 中期 PPT 第 4、6 页。曲线为阶段示意，各阶段的具体测量与可靠性按对应验证记录评价。</p>
+      </div>
+    </section>
+
+    <section class="section engineering" id="engineering" aria-labelledby="engineering-title">
+      <div class="shell">
+        <div class="section-heading split-heading">
+          <div><p class="eyebrow" lang="en">Inside the prototype</p><h2 id="engineering-title">打开样机，<br>看见工程细节。</h2></div>
+          <p>从板上的铜连接，到 FPC 出线口，再到能保存与回放的记录。每一次修订，都有对应的设计文件。</p>
+        </div>
+        <div class="engineering-browser">
+          <div class="engineering-tabs" role="tablist" aria-label="工程资料类别">
+            <button type="button" role="tab" id="engineering-shell" aria-selected="true" aria-controls="engineering-panel" data-engineering="shell">外壳与装配 <span>3D</span></button>
+            <button type="button" role="tab" id="engineering-pcb" aria-selected="false" aria-controls="engineering-panel" tabindex="-1" data-engineering="pcb">四层采集板 <span>PCB</span></button>
+            <button type="button" role="tab" id="engineering-software" aria-selected="false" aria-controls="engineering-panel" tabindex="-1" data-engineering="software">采集与回看 <span>DATA</span></button>
+          </div>
+          <div class="engineering-panel" id="engineering-panel" role="tabpanel" aria-labelledby="engineering-shell" tabindex="0">
+            <div class="engineering-visual">
+              <div class="engineering-image-frame"><a class="zoomable" id="engineering-zoom" href="./assets/images/assembly-exploded.webp" data-preview="同板外壳数字装配爆炸视图"><img id="engineering-image" src="./assets/images/assembly-exploded.webp" width="1100" height="733" alt="同板外壳数字装配爆炸视图" loading="lazy" decoding="async"></a></div>
+              <div class="engineering-views" aria-label="切换图纸视图"><button type="button" data-view="0" aria-pressed="true">装配爆炸</button><button type="button" data-view="1" aria-pressed="false">左脚上盖</button><button type="button" data-view="2" aria-pressed="false">左脚底座</button><button type="button" data-view="3" aria-pressed="false">右脚上盖</button><button type="button" data-view="4" aria-pressed="false">右脚底座</button></div>
+              <p class="engineering-caption" id="engineering-caption">同板左右脚外壳 · 数字装配视图 · 点击查看大图</p>
+            </div>
+            <div class="engineering-copy"><p class="card-label" id="engineering-label">结构交付 · 2026.11.08</p><h3 id="engineering-heading">四件模型，<br>服务左右脚穿戴。</h3><p id="engineering-description">左右脚沿用同型号采集板，各有上盖与底座。根据 FPC 出线和固定需求修订开口，完成数字装配检查。</p><ul class="engineering-points" id="engineering-points"><li>扩大 FPC 出线口，增加圆角</li><li>交付左／右上盖与底座四件 STEP</li><li>对应 PCB、接口与穿戴固定方式复核</li></ul><div class="engineering-pending"><span>下一步验证</span><p id="engineering-next">打印试装、真实排线应力与长时间穿戴固定。</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section effort" id="effort" aria-labelledby="effort-title">
+      <div class="shell">
+        <div class="section-heading split-heading">
+          <div><p class="eyebrow" lang="en">Work behind the prototype</p><h2 id="effort-title">研发投入，<br>有记录，有交付。</h2></div>
+          <p>硬件、采集、算法、医工协作与软件并行推进。展开成员记录，查看本阶段的工作和下一步。</p>
+        </div>
+        <div class="effort-layout">
+          <div class="effort-summary"><span>本阶段登记工时</span><p class="effort-total"><strong class="mono">216.5</strong><span>小时</span></p><p>5 位成员 · 5 个工作方向</p><div class="effort-output"><span><b>4</b> 件外壳 STEP</span><span><b>2</b> 套离线模型</span><span><b>69</b> 段压力记录</span></div><p class="source-note">工时按 11.0 中期 PPT 第 11 页所列数值加总，覆盖该页阶段登记范围。详细依据为线序清单、编译与短测日志、质控记录、模型及交接资料。</p></div>
+          <div class="effort-members">
+            <details class="member-record" open><summary><span><strong>周子良</strong><small>硬件与嵌入式采集</small></span><span class="member-hours"><b class="mono">33</b> h <i>＋</i></span></summary><div class="member-detail"><p>联调 48 点采集、核对双脚线序，参与左板复焊与短时回读，交付四件外壳模型。</p><p class="member-evidence">依据 · 线序清单、编译记录、短测日志、STEP 模型</p><p><b>下一步</b> 试装新壳，复核独立供电与映射，开展双脚同步长时采集。</p></div></details>
+            <details class="member-record"><summary><span><strong>黄飞龙</strong><small>样机测试与采集验证</small></span><span class="member-hours"><b class="mono">70.5</b> h <i>＋</i></span></summary><div class="member-detail"><p>搭建串口解析与导出模块，检查分区按压与帧时序，编制采集执行表和操作规程。</p><p class="member-evidence">依据 · 按压与帧日志、预采质控记录、操作规程</p><p><b>下一步</b> 分点复测异常通道，开展志愿者重复性预试验。</p></div></details>
+            <details class="member-record"><summary><span><strong>阳雄</strong><small>算法处理与数据质控</small></span><span class="member-hours"><b class="mono">26</b> h <i>＋</i></span></summary><div class="member-detail"><p>核对 60 点映射，梳理基线、滤波与 COP 算法，复算压力和 IMU 数据，复核预采文件。</p><p class="member-evidence">依据 · 算法说明、复算记录、预采质控</p><p><b>下一步</b> 复核异常通道、验证重复性，确定扩采质控标准。</p></div></details>
+            <details class="member-record"><summary><span><strong>徐子博</strong><small>医工协作与技术交付</small></span><span class="member-hours"><b class="mono">59</b> h <i>＋</i></span></summary><div class="member-detail"><p>参与早期标定，整理接口交接、竞赛申报、伦理申请及医院沟通材料。</p><p class="member-evidence">依据 · 标定记录、工程交接包、伦理与医院沟通材料</p><p><b>下一步</b> 跟进伦理与医院合作，明确分工并修订采集方案。</p></div></details>
+            <details class="member-record"><summary><span><strong>庞悦</strong><small>软件平台与通信</small></span><span class="member-hours"><b class="mono">28</b> h <i>＋</i></span></summary><div class="member-detail"><p>复测早期采集与导出，核对双脚接入、任务标签、录制与回放，梳理小程序校准流程。</p><p class="member-evidence">依据 · 显示回归、前端逻辑检查、小程序编译记录</p><p><b>下一步</b> 复测手机与双设备 BLE 接入、重连、长时录制及保存。</p></div></details>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -232,21 +307,28 @@
           <span class="note-icon" aria-hidden="true"><i class="fa fa-info-circle"></i></span>
           <div><h3>样本与结论边界</h3><p>10 个采集对象采用项目归档口径。因跨批次存在编号复用，合并为 9 个留出组复验得到相同结果。同一录制段产生的窗口可能相关。本结果适用于小规模、受控的站立和步行工程样本。自由活动、跨场景及足踝术后人群的泛化能力和临床用途仍待验证。</p></div>
         </aside>
+        <details class="model-compare">
+          <summary>展开查看：压力与压力＋IMU 的两套验证</summary>
+          <div class="model-comparison-grid">
+            <div><h4>双脚压力模型</h4><strong>635 / 635 窗</strong><p>10 个归档采集对象，69 段记录（站立 34 段、步行 35 段）；整段判定 69 / 69。</p></div>
+            <div><h4>压力＋IMU 融合模型</h4><strong>622 / 622 窗</strong><p>9 个采集组，68 段有效配对记录（站立 33 段、步行 35 段）；整段判定 68 / 68。</p></div>
+          </div>
+          <p>来源：11.0 中期 PPT 第 6 页。两套模型均按采集组留出评估；在同一批 622 个配对窗口上，压力模型与融合模型均判对，当前样本尚不能证明加入 IMU 带来额外分类收益。临床及自由活动泛化仍待验证。</p>
+        </details>
       </div>
     </section>
 
     <section class="section roadmap" id="roadmap" aria-labelledby="roadmap-title">
       <div class="shell">
         <div class="section-heading split-heading">
-          <div><p class="eyebrow" lang="en">Research Roadmap</p><h2 id="roadmap-title">从原型走向规范采集。</h2></div>
-          <p>把传感、穿戴和软件逐步接成可复测的流程，并与康复医护讨论后续的院内研究方案。</p>
+          <div><p class="eyebrow" lang="en">Research Roadmap</p><h2 id="roadmap-title">下一程，让测量经得起重复。</h2></div>
+          <p>后续计划依据 11.0 中期 PPT 第 13 页。按设备验证、伦理及院方准入进度推进，逐步建立可复测的研究流程。</p>
         </div>
-        <ol class="timeline" aria-label="2026 年研发里程碑">
-          <li><span class="timeline-date mono">04–06 月</span><h3>48 点实验原型</h3><p>完成柔性阵列扫描，跑通初版热图与响应重心。</p></li>
-          <li><span class="timeline-date mono">07–09 月</span><h3>双脚 120 点</h3><p>适配 DO-P6002，推进自研板卡与双脚、IMU 同采。</p></li>
-          <li><span class="timeline-date mono">10 月下旬</span><h3>医工交流</h3><p>赴院交流，讨论足踝术后随访需求与患者先导采集方案。</p></li>
-          <li><span class="timeline-date mono">10.29–11.08</span><h3>V3 硬件迭代</h3><p>推进四层板联调，交付同板左右脚外壳设计。</p></li>
-          <li><span class="timeline-date mono">11.09–11.14</span><h3>预采与离线验证</h3><p>归档新一轮站立与舒适步行样本，更新回放并完成分类评估。</p></li>
+        <ol class="timeline roadmap-next" aria-label="后续研究计划，尚待推进">
+          <li><span class="timeline-date mono">2026.11—12</span><h3>样机与流程验收</h3><p>冻结样机版本，验证映射、穿戴固定、双脚采集与保存。</p></li>
+          <li><span class="timeline-date mono">2027.01—02</span><h3>重复性与先导研究</h3><p>推进健康志愿者重复测量；患者先导采集以伦理及院方准入为前提。</p></li>
+          <li><span class="timeline-date mono">2027.03—04</span><h3>分析与成果整理</h3><p>复核统计结果，整理研究报告、论文和专利申请材料。</p></li>
+          <li><span class="timeline-date mono">2027.05</span><h3>项目结题</h3><p>完成结题材料、成果汇报及工程资料归档。</p></li>
         </ol>
         <article class="collab-card">
           <div class="collab-copy">
