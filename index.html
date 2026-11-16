@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f9fb">
+  <meta name="description" content="履见 LUJIAN 是深圳技术大学健康与环境工程学院团队开发的双脚足底数字化检测与足踝术后康复监测科研原型。">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="履见 LUJIAN · 智能鞋垫科研原型">
+  <meta property="og:description" content="为足踝术后康复研究提供可重复、可比较、可回看的双脚足底记录。">
+  <title>履见 LUJIAN · 智能鞋垫科研原型</title>
+  <link rel="icon" type="image/png" href="./assets/images/lujian-mark.png">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+  <script src="https://cdn.tailwindcss.com" defer></script>
+  <link rel="stylesheet" href="./assets/site.css">
+  <script src="./assets/site.js" defer></script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <header class="masthead">
+    <div class="shell masthead-inner">
+      <a class="brand" href="#top" aria-label="履见 LUJIAN，返回顶部">
+        <img src="./assets/images/lujian-mark.png" alt="" width="36" height="28">
+        <span class="brand-type"><strong>履见</strong><span lang="en">LUJIAN</span></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-controls="main-nav" aria-expanded="false" hidden>
+        <span class="nav-toggle-lines" aria-hidden="true"></span><span class="sr-only">打开导航</span>
+      </button>
+      <nav class="main-nav" id="main-nav" aria-label="主导航">
+        <a href="#vision">项目愿景</a>
+        <a href="#system">核心系统</a>
+        <a href="#gallery">研发图集</a>
+        <a href="#validation">算法验证</a>
+        <a href="#roadmap">研发历程</a>
+        <a href="#team">团队荣誉</a>
+        <a class="nav-contact-mobile" href="#contact">交流合作</a>
+      </nav>
+      <a class="header-contact" href="#contact">交流合作<span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="shell">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <p class="hero-tag"><span class="status-dot" aria-hidden="true"></span><span class="mono">INSOLE60</span><span class="tag-rule" aria-hidden="true"></span>智能鞋垫科研原型</p>
+            <h1>让足底变化，<br><em>有迹可循。</em></h1>
+            <p class="hero-lede">面向足踝术后康复研究的双脚足底数字化检测系统，为足踝骨科、康复医学科医护及科研人员提供可重复、可比较、可回看的测量记录。</p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#system">了解核心系统<span aria-hidden="true">↘</span></a>
+              <a class="button button-secondary" href="#validation">查看验证结果<span aria-hidden="true">→</span></a>
+            </div>
+          </div>
+          <figure class="hero-figure">
+            <div class="instrument-frame">
+              <div class="instrument-top"><span class="instrument-id mono"><b aria-hidden="true">+</b> LUJIAN / V3</span><span>双脚足底采集系统</span></div>
+              <div class="hero-image">
+                <img class="block w-full" src="./assets/images/hero-concept.webp" width="1536" height="1024" alt="履见产品概念渲染，两只深蓝柔性鞋垫与一对踝侧采集盒，右侧鞋垫示意足底响应" fetchpriority="high">
+              </div>
+              <figcaption class="instrument-bottom"><span>产品概念图</span><span class="scale-key"><b aria-hidden="true"></b>足底响应示意</span></figcaption>
+            </div>
+          </figure>
+        </div>
+        <dl class="hero-specs">
+          <div><dt>双脚有效测点</dt><dd><span class="mono">120</span><span>点</span></dd></div>
+          <div><dt>默认压力采样率</dt><dd><span class="mono">20</span><span>Hz</span></dd></div>
+          <div><dt>双模通信</dt><dd><span class="mono">USB / BLE</span></dd></div>
+          <div><dt>省级大学生创新创业训练计划</dt><dd><span class="mono grant-id">S202614655022</span></dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section vision" id="vision" aria-labelledby="vision-title">
+      <div class="shell">
+        <div class="section-heading split-heading">
+          <div><p class="eyebrow" lang="en">Why LUJIAN</p><h2 id="vision-title">把每次复诊，<br>连成一段可回看的记录。</h2></div>
+          <p>足踝术后复诊往往只在少数时点观察患者表现。履见探索在医嘱允许的活动范围内，记录双脚站立和步行时的足底响应与脚部运动。</p>
+        </div>
+        <div class="vision-grid">
+          <article class="vision-card">
+            <div class="vision-icon" aria-hidden="true"><i class="fa fa-clock-o"></i></div>
+            <h3>一次观察能留下什么？</h3>
+            <p>穿戴、鞋内预载和活动任务都会影响读数。跨次复诊要比较患侧与对侧，先要知道每次数据如何采得。</p>
+          </article>
+          <article class="vision-card vision-card-blue">
+            <div class="vision-icon" aria-hidden="true"><i class="fa fa-history"></i></div>
+            <h3>同样的任务，可以再测一次。</h3>
+            <p>按统一流程采集，保留试次及质控信息，再通过双脚热图和响应重心轨迹回看差异。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section system" id="system" aria-labelledby="system-title">
+      <div class="shell">
+        <div class="section-heading split-heading">
+          <div><p class="eyebrow" lang="en">The System</p><h2 id="system-title">从足底信号到科研记录。</h2></div>
+          <p>柔性压阻阵列与踝侧采集盒记录足底响应和脚部运动。电脑科研端面向采集与回看，微信小程序支持移动采集开发与验证。</p>
+        </div>
+        <div class="bento">
+          <article class="bento-card hardware-card">
+            <div class="card-copy">
+              <p class="card-label">柔性阵列</p>
+              <h3>每脚 60 点，双脚共 120 点。</h3>
+              <p>DO-P6002 柔性压阻鞋垫贴合鞋内，左右脚分别输出 60 个有效测点的响应。</p>
+            </div>
+            <figure class="hardware-media">
+              <a class="zoomable hardware-photo" href="./assets/images/v3-prototype.webp" data-preview="V3 双脚穿戴工程样机实拍">
+                <img src="./assets/images/v3-prototype.webp" width="1180" height="1021" alt="V3 工程样机的两只柔性鞋垫、踝侧采集盒与绑带" loading="lazy" decoding="async">
+              </a>
+              <figcaption>V3 双脚穿戴工程样机实拍</figcaption>
+            </figure>
+          </article>
+          <article class="bento-card board-card">
+            <div class="card-copy">
+              <p class="card-label">V3 采集硬件</p>
+              <h3>压力与六轴 IMU</h3>
+              <p>自研四层板采用 XIAO nRF52840 Sense Plus，支持 USB 和 BLE。左右脚使用同型号板卡，配套 3D 打印外壳已完成数字装配检查。</p>
+            </div>
+            <div class="board-visuals">
+              <figure><a class="zoomable" href="./assets/images/v3-board.webp" data-preview="V3 采集板的 CAD 局部器件视图"><img src="./assets/images/v3-board.webp" width="1200" height="700" alt="V3 采集板 CAD 模型，其中显示板体和部分已建模器件" loading="lazy" decoding="async"></a><figcaption>采集板 CAD 局部视图</figcaption></figure>
+              <figure><a class="zoomable" href="./assets/images/v3-enclosure.webp" data-preview="同板 3D 打印外壳数字装配"><img src="./assets/images/v3-enclosure.webp" width="1200" height="800" alt="同板左右脚外壳中的一件外壳与板卡数字装配爆炸视图" loading="lazy" decoding="async"></a><figcaption>外壳数字装配</figcaption></figure>
+            </div>
+          </article>
+          <article class="bento-card desktop-card">
+            <div class="card-copy">
+              <p class="card-label">电脑科研端</p>
+              <h3>在热图上看见双脚差异。</h3>
+              <p>支持 2D / 3D 压力热图、响应重心（COP）轨迹、相对压力时间积分（PTI），以及采集质控和记录回放。</p>
+            </div>
+            <figure class="desktop-visual">
+              <a class="zoomable" href="./assets/images/desktop-heatmap.webp" data-preview="电脑科研端双脚 3D 热图界面演示">
+                <img src="./assets/images/desktop-heatmap.webp" width="1000" height="624" alt="履见电脑科研端同时显示左右脚 3D 足底响应热图" loading="lazy" decoding="async">
+              </a>
+              <figcaption>电脑端界面演示 · 模拟数据</figcaption>
+            </figure>
+          </article>
+          <article class="bento-card mobile-card">
+            <div class="card-copy">
+              <p class="card-label">微信小程序</p>
+              <h3>移动端双机接入</h3>
+              <p>已实现双设备 BLE 接入逻辑、实时热图界面和本地 CSV 导出。</p>
+              <p class="card-note">手机与双实物设备联调待验收。</p>
+            </div>
+            <figure class="mobile-visual">
+              <a class="zoomable" href="./assets/images/miniapp-heatmap.webp" data-preview="微信小程序热图界面演示">
+                <img src="./assets/images/miniapp-heatmap.webp" width="816" height="1840" alt="微信小程序演示界面的足底热图" loading="lazy" decoding="async">
+              </a>
+              <figcaption>小程序界面演示</figcaption>
+            </figure>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section gallery" id="gallery" aria-labelledby="gallery-title">
+      <div class="shell">
+        <div class="section-heading split-heading">
+          <div><p class="eyebrow" lang="en">Prototype Gallery</p><h2 id="gallery-title">原型细节与穿戴</h2></div>
+          <p>柔性鞋垫放入鞋内，采集盒固定于踝侧。通过样机照片和概念图，可以查看佩戴方式与结构迭代。</p>
+        </div>
+        <div class="photo-grid">
+          <figure class="photo-card photo-feature">
+            <a class="zoomable media-link" href="./assets/images/gallery-v3-wear.webp" data-preview="双脚工程样机穿戴实拍">
+              <img src="./assets/images/gallery-v3-wear.webp" width="1260" height="985" alt="双脚穿鞋时，在左右脚踝外侧通过绑带固定采集盒" loading="lazy" decoding="async">
+            </a>
+            <figcaption><strong>双脚样机穿戴</strong><span>工程实拍</span></figcaption>
+          </figure>
+          <figure class="photo-card">
+            <a class="zoomable media-link" href="./assets/images/gallery-v3-case.webp" data-preview="V3 踝侧采集盒实拍">
+              <img src="./assets/images/gallery-v3-case.webp" width="1260" height="833" alt="安装了绑带和柔性排线的 V3 踝侧采集盒" loading="lazy" decoding="async">
+            </a>
+            <figcaption><strong>V3 踝侧采集盒</strong><span>实拍</span></figcaption>
+          </figure>
+          <figure class="photo-card">
+            <a class="zoomable media-link" href="./assets/images/gallery-v3-strap.webp" data-preview="V3 壳体侧面与绑带实拍">
+              <img src="./assets/images/gallery-v3-strap.webp" width="1260" height="862" alt="V3 采集盒侧面及固定绑带的细节" loading="lazy" decoding="async">
+            </a>
+            <figcaption><strong>壳体与绑带</strong><span>实拍</span></figcaption>
+          </figure>
+          <figure class="photo-card">
+            <a class="zoomable media-link" href="./assets/images/gallery-early-prototype.webp" data-preview="早期双脚样机实拍">
+              <img src="./assets/images/gallery-early-prototype.webp" width="1260" height="945" alt="早期双脚鞋垫、线束和采集装置实物" loading="lazy" decoding="async">
+            </a>
+            <figcaption><strong>早期双脚样机</strong><span>实拍</span></figcaption>
+          </figure>
+          <figure class="photo-card photo-concept">
+            <a class="zoomable media-link" href="./assets/images/gallery-wear-concept.webp" data-preview="踝侧采集盒穿戴概念图">
+              <img src="./assets/images/gallery-wear-concept.webp" width="1008" height="1260" alt="白色运动鞋与绑在踝侧的采集盒穿戴示意" loading="lazy" decoding="async">
+            </a>
+            <figcaption><strong>踝侧穿戴示意</strong><span>概念图</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section validation" id="validation" aria-labelledby="validation-title">
+      <div class="shell">
+        <div class="section-heading split-heading">
+          <div><p class="eyebrow" lang="en">Engineering Validation</p><h2 id="validation-title">站立与步行的离线验证。</h2></div>
+          <p>以双脚压力的波动与相邻帧变化为特征，使用逻辑回归分类。验证按采集编号整组留一。<time datetime="2026-11-14">数据截至 2026.11.14</time></p>
+        </div>
+        <dl class="kpi-grid">
+          <div><dt>归档采集对象</dt><dd class="mono">10</dd></div>
+          <div><dt>双脚压力实采记录</dt><dd class="mono">69<span>段</span></dd></div>
+          <div><dt>合格的 2 秒窗口</dt><dd class="mono">635<span>个</span></dd></div>
+        </dl>
+        <div class="validation-board">
+          <div class="validation-results">
+            <h3>按采集组留出的预测结果</h3>
+            <dl>
+              <div><dt>窗口分类</dt><dd class="mono">635<span>/635</span></dd></div>
+              <div><dt>整段判定</dt><dd class="mono">69<span>/69</span></dd></div>
+            </dl>
+            <p>站立 34 段、步行 35 段。同段窗口的步行概率取均值，再按 0.50 阈值判定。</p>
+          </div>
+          <figure class="validation-figure">
+            <a class="zoomable" href="./assets/images/model-evaluation.webp" data-preview="站立与步行离线分类评估图" data-wide-preview>
+              <img src="./assets/images/model-evaluation.webp" width="2340" height="990" alt="左图为窗口级混淆矩阵，站立 245 窗与步行 390 窗均判对。右图为逐段留出预测，69 段均判对。" loading="lazy" decoding="async">
+            </a>
+            <figcaption><span>窗口混淆矩阵与逐段留出预测</span><button class="figure-open" type="button" data-open-figure hidden>放大图表<span aria-hidden="true"> ↗</span></button></figcaption>
+          </figure>
+        </div>
+        <aside class="validation-note">
+          <span class="note-icon" aria-hidden="true"><i class="fa fa-info-circle"></i></span>
+          <div><h3>样本与结论边界</h3><p>10 个采集对象采用项目归档口径。因跨批次存在编号复用，合并为 9 个留出组复验得到相同结果。同一录制段产生的窗口可能相关。本结果适用于小规模、受控的站立和步行工程样本。自由活动、跨场景及足踝术后人群的泛化能力和临床用途仍待验证。</p></div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section roadmap" id="roadmap" aria-labelledby="roadmap-title">
+      <div class="shell">
+        <div class="section-heading split-heading">
+          <div><p class="eyebrow" lang="en">Research Roadmap</p><h2 id="roadmap-title">从原型走向规范采集。</h2></div>
+          <p>把传感、穿戴和软件逐步接成可复测的流程，并与康复医护讨论后续的院内研究方案。</p>
+        </div>
+        <ol class="timeline" aria-label="2026 年研发里程碑">
+          <li><span class="timeline-date mono">04–06 月</span><h3>48 点实验原型</h3><p>完成柔性阵列扫描，跑通初版热图与响应重心。</p></li>
+          <li><span class="timeline-date mono">07–09 月</span><h3>双脚 120 点</h3><p>适配 DO-P6002，推进自研板卡与双脚、IMU 同采。</p></li>
+          <li><span class="timeline-date mono">10 月下旬</span><h3>医工交流</h3><p>赴院交流，讨论足踝术后随访需求与患者先导采集方案。</p></li>
+          <li><span class="timeline-date mono">10.29–11.08</span><h3>V3 硬件迭代</h3><p>推进四层板联调，交付同板左右脚外壳设计。</p></li>
+          <li><span class="timeline-date mono">11.09–11.14</span><h3>预采与离线验证</h3><p>归档新一轮站立与舒适步行样本，更新回放并完成分类评估。</p></li>
+        </ol>
+        <article class="collab-card">
+          <div class="collab-copy">
+            <p class="card-label">医工协作进展</p>
+            <h3>深圳市第四人民医院<br>（深圳市萨米国际医疗中心）康复医学科</h3>
+            <p>团队已与院方康复医学科交流并形成研究方案和样机评审资料。首批患者研究仍待设备验证、院方准入及伦理条件落实。</p>
+            <div class="sop">
+              <h4>健康志愿者采集 SOP</h4>
+              <ol><li>空载校准</li><li>30 秒安静站立</li><li>舒适步行</li><li>脱下重穿</li></ol>
+            </div>
+          </div>
+          <figure class="outreach-photo">
+            <a class="zoomable media-link" href="./assets/images/gallery-clinical-exchange.webp" data-preview="医工交流讨论现场">
+              <img src="./assets/images/gallery-clinical-exchange.webp" width="1180" height="657" alt="交流现场桌面与讨论参与者的手部，资料已脱敏" loading="lazy" decoding="async">
+            </a>
+            <figcaption>医工交流讨论现场，画面已脱敏</figcaption>
+          </figure>
+        </article>
+      </div>
+    </section>
+
+    <section class="section team" id="team" aria-labelledby="team-title">
+      <div class="shell">
+        <div class="section-heading split-heading">
+          <div><p class="eyebrow" lang="en">Team &amp; Recognition</p><h2 id="team-title">团队与阶段成果。</h2></div>
+          <p>深圳技术大学健康与环境工程学院大创团队</p>
+        </div>
+        <ul class="honors">
+          <li>
+            <a class="zoomable media-link" href="./assets/images/evidence-bme.webp" data-preview="全国生医工竞赛获奖证书节选" data-wide-preview><img src="./assets/images/evidence-bme.webp" width="1500" height="632" alt="全国大学生生物医学工程创新设计竞赛获奖证书节选" loading="lazy" decoding="async"></a>
+            <div><h3>全国三等奖</h3><p>第十一届全国大学生生物医学工程创新设计竞赛</p></div>
+          </li>
+          <li>
+            <a class="zoomable media-link" href="./assets/images/evidence-ican.webp" data-preview="iCAN 大湾区赛区获奖证书节选" data-wide-preview><img src="./assets/images/evidence-ican.webp" width="1500" height="630" alt="iCAN 大学生创新创业大赛大湾区赛区获奖证书节选" loading="lazy" decoding="async"></a>
+            <div><h3>大湾区赛区三等奖</h3><p>iCAN 大学生创新创业大赛</p></div>
+          </li>
+          <li>
+            <a class="zoomable media-link" href="./assets/images/evidence-spring.webp" data-preview="「春雨杯」类别赛入围邀请函节选"><img src="./assets/images/evidence-spring.webp" width="1460" height="1177" alt="「春雨杯」中医及慢病类别赛入围邀请函节选" loading="lazy" decoding="async"></a>
+            <div><h3>类别赛入围</h3><p>首届「春雨杯」医工融合大赛暨第九届中国医疗器械创新创业大赛，中医及慢病类别赛</p></div>
+          </li>
+        </ul>
+        <div class="activities">
+          <h3>科普实践与展陈</h3>
+          <div class="activity-grid">
+            <article class="activity-card">
+              <a class="zoomable media-link" href="./assets/images/evidence-science.webp" data-preview="陕西乾县科普课堂的鞋垫实物展示"><img src="./assets/images/evidence-science.webp" width="465" height="192" alt="陕西乾县科普课堂现场手持鞋垫的画面局部" loading="lazy" decoding="async"></a>
+              <div><h4>陕西乾县科普实践</h4><p>「声润关中」实践队在科研科普课堂展示智能鞋垫实物。</p><a class="source-link" href="https://www.jrdxsw.com/shsj/dxshsj/70398.html">查看公开报道 <span aria-hidden="true">↗</span></a></div>
+            </article>
+            <article class="activity-card">
+              <div class="activity-pair">
+                <a class="zoomable media-link" href="./assets/images/gallery-maker-event.webp" data-preview="创客节展位易拉宝实拍"><img src="./assets/images/gallery-maker-event.webp" width="830" height="1180" alt="履见易拉宝立在创客节展位前的现场照片" loading="lazy" decoding="async"></a>
+                <a class="zoomable media-link" href="./assets/images/evidence-exhibit.webp" data-preview="创客节展陈海报"><img src="./assets/images/evidence-exhibit.webp" width="1141" height="850" alt="履见智能鞋垫创客节展陈海报节选" loading="lazy" decoding="async"></a>
+              </div>
+              <div><h4>创客节项目展示</h4><p>团队为智能鞋垫展示准备了海报和易拉宝。</p></div>
+            </article>
+          </div>
+          <ul class="program-notes">
+            <li><span aria-hidden="true"><i class="fa fa-bookmark-o"></i></span><div><strong>深圳鲲鹏青年创新创业项目</strong><p>校方推荐入库，市级正式通知待核。</p></div></li>
+            <li><span aria-hidden="true"><i class="fa fa-building-o"></i></span><div><strong>第二十八届高交会</strong><p>已形成参展材料，拟于 11 月 26–28 日参展。</p></div></li>
+          </ul>
+        </div>
+        <div class="roster">
+          <div class="roster-heading"><h3>研发成员</h3><p>指导教师<span>李贵叶、陈玲玲</span></p></div>
+          <ul>
+            <li><strong>周子良</strong><span>硬件与嵌入式采集</span></li>
+            <li><strong>徐子博</strong><span>医工协作与技术交付</span></li>
+            <li><strong>阳雄</strong><span>算法处理与数据质控</span></li>
+            <li><strong>黄飞龙</strong><span>样机测试与采集验证</span></li>
+            <li><strong>庞悦</strong><span>软件平台与通信</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="contact">
+    <div class="shell">
+      <div class="footer-main">
+        <div class="footer-copy">
+          <p class="eyebrow" lang="en">Contact</p>
+          <h2>交流合作与展陈联系</h2>
+          <p>科研交流与展陈咨询可通过深圳技术大学健康与环境工程学院的公开联系渠道提出，并注明「履见」及来意。</p>
+          <div class="footer-actions">
+            <a class="button button-primary" href="mailto:hsee@sztu.edu.cn?subject=%E5%B1%A5%E8%A7%81%EF%BC%88LUJIAN%EF%BC%89%E9%A1%B9%E7%9B%AE%E4%BA%A4%E6%B5%81">学院公开邮箱<span aria-hidden="true">↗</span></a>
+            <a class="button button-secondary" href="https://hsee.sztu.edu.cn/">学院官网<span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <figure class="mascot"><img src="./assets/images/xiao-jian.webp" width="383" height="460" alt="履见项目 IP 小见，手持足底热图屏幕" loading="lazy" decoding="async"><figcaption>项目 IP「小见」</figcaption></figure>
+      </div>
+      <div class="footer-meta">
+        <div><strong>履见 LUJIAN</strong><p>科研原型，仅供工程验证与学术交流。请勿用于诊断、治疗决策或自行调整康复计划。</p></div>
+        <a href="#top">返回顶部 <span aria-hidden="true">↑</span></a>
+      </div>
+    </div>
+  </footer>
+
+  <dialog class="image-dialog" aria-labelledby="preview-title">
+    <div class="dialog-heading"><h2 id="preview-title"></h2><form method="dialog"><button type="submit" aria-label="关闭预览" autofocus>×</button></form></div>
+    <div class="dialog-body"><img alt=""></div>
+    <p class="dialog-hint">横向滑动查看更多细节</p>
+  </dialog>
+</body>
+</html>
