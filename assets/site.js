@@ -24,6 +24,11 @@ navToggle.addEventListener("click", () => {
 nav.addEventListener("click", (event) => {
   if (event.target.closest("a")) setNavOpen(false);
 });
+document.addEventListener("click", (event) => {
+  if (!nav.classList.contains("is-open")) return;
+  if (event.target.closest(".main-nav") || event.target.closest(".nav-toggle")) return;
+  setNavOpen(false);
+});
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape" && nav.classList.contains("is-open")) {
     setNavOpen(false);
@@ -47,6 +52,9 @@ function showImage(link, trigger) {
   previewBody.tabIndex = wideImage && compact.matches ? 0 : -1;
   previewTitle.textContent = link.dataset.preview;
   previewImage.alt = link.querySelector("img").alt;
+  preview.classList.add("is-loading");
+  previewImage.onload = () => preview.classList.remove("is-loading");
+  previewImage.onerror = () => preview.classList.remove("is-loading");
   previewImage.src = link.href;
   preview.showModal();
   previewBody.scrollLeft = 0;
@@ -70,6 +78,7 @@ if (typeof preview.showModal === "function") {
   });
   preview.addEventListener("close", () => {
     previewImage.removeAttribute("src");
+    preview.classList.remove("is-loading");
     previewTrigger.focus({ preventScroll: true });
   });
 }
